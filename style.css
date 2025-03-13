@@ -14,7 +14,7 @@
   --font-lg: 4rem;
   --font-xl: 4.5rem;
   --section-horizontal-padding: 2rem;
-  --section-vertical-padding: 1rem;
+  --section-vertical-padding: 2rem;
 }
 
 @media (min-width: 1024px) {
@@ -25,6 +25,7 @@
     --font-lg: 6.5rem;
     --font-xl: 7rem;
     --section-horizontal-padding: 6rem;
+    --section-vertical-padding: 6rem;
   }
 }
 @media (min-width: 1080px) {
@@ -390,23 +391,45 @@ header {
 /* CSS FOR VIDEO SECTION STARTS HERE */
 #video-section {
   background-color: var(--primary-color);
+  padding-top: 5rem;
   padding-bottom: 0;
   .video-heading {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: start;
     align-items: start;
-    gap: 13rem;
+    padding-bottom: 2rem;
+    color: #fff;
     h2 {
       margin-top: 0;
-      width: 110%;
-      color: #fff;
+      margin-bottom: 1rem;
       span {
         color: var(--professional-yellow-color);
       }
     }
     p {
-      color: #fff;
       font-weight: 400 !important;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .video-heading {
+      flex-direction: row;
+      justify-content: space-between;
+      gap: 6rem;
+      padding-bottom: 5rem;
+      h2 {
+        flex: 6;
+      }
+      p {
+        flex: 4;
+      }
+    }
+  }
+
+  @media (min-width: 1024) {
+    .video-heading {
+      gap: 15rem;
     }
   }
 
@@ -418,14 +441,21 @@ header {
       height: auto;
     }
     .video-play-icon {
-      width: 15rem;
-      height: 15rem;
+      width: 6rem;
+      height: 6rem;
       object-fit: contain;
       position: absolute;
       z-index: 10;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
+    }
+
+    @media (min-width: 768px) {
+      .video-play-icon {
+        width: 15rem;
+        height: 15rem;
+      }
     }
   }
 }
