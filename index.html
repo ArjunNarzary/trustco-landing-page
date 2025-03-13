@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
     <!-- Page header like navigation hero section will start here -->
@@ -19,7 +20,7 @@
         <img src="/assets/brands/Logo.png" alt="trustco logo" />
       </a>
 
-      <nav>
+      <nav class="nav-lg">
         <ul>
           <li class="active"><a href="/">Features</a></li>
           <li><a href="/">Solutions</a></li>
@@ -29,13 +30,34 @@
         </ul>
       </nav>
 
-      <div class="auth-btn-container">
-        <a href="/">
-          <button class="login-btn">Login</button>
-        </a>
-        <a href="/">
-          <button class="signin-btn">Sign up</button>
-        </a>
+      <div class="action-btn-container">
+        <div class="auth-btn-container">
+          <a href="/">
+            <button class="login-btn">Login</button>
+          </a>
+          <a href="/">
+            <button class="signin-btn">Sign up</button>
+          </a>
+        </div>
+        <div class="popup-nav">
+          <button class="menu-icon" id="menu-btn">
+            <img src="/assets/icons/menu.png" alt="menu-icon" />
+          </button>
+          <nav class="nav-sm" id="sm-nav-list">
+            <ul>
+              <li class="active"><a href="/">Features</a></li>
+              <li><a href="/">Solutions</a></li>
+              <li><a href="/">Company</a></li>
+              <li><a href="/">Resources</a></li>
+              <li><a href="/">Contact</a></li>
+            </ul>
+            <hr />
+            <div class="auth-btn-sm-container">
+              <a href="/"> Login </a>
+              <a href="/"> Sign up </a>
+            </div>
+          </nav>
+        </div>
       </div>
     </header>
     <!-- Page main content will start here -->
