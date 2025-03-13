@@ -22,7 +22,7 @@
     --font-xs: 1rem;
     --font-sm: 2rem;
     --font-md: 2.5rem;
-    --font-lg: 6rem;
+    --font-lg: 6.5rem;
     --font-xl: 7rem;
     --section-horizontal-padding: 6rem;
   }
@@ -220,11 +220,13 @@ section {
   justify-content: space-evenly;
   align-items: center;
   padding-top: 5rem;
+  gap: 6rem;
 
   .trusted-brand-icon-container {
     flex-grow: 1;
     display: flex;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
     align-items: center;
   }
 }
@@ -383,3 +385,47 @@ header {
   }
 }
 /* CSS FOR HEADER SECTION ENDS HERE */
+
+/* CSS FOR VIDEO SECTION STARTS HERE */
+#video-section {
+  background-color: var(--primary-color);
+  padding-bottom: 0;
+  .video-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 13rem;
+    h2 {
+      margin-top: 0;
+      width: 110%;
+      color: #fff;
+      span {
+        color: var(--professional-yellow-color);
+      }
+    }
+    p {
+      color: #fff;
+      font-weight: 400 !important;
+    }
+  }
+
+  .video-player-container {
+    position: relative;
+    .video-thumbnail {
+      object-fit: contain;
+      width: 100%;
+      height: auto;
+    }
+    .video-play-icon {
+      width: 15rem;
+      height: 15rem;
+      object-fit: contain;
+      position: absolute;
+      z-index: 10;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+/* CSS FOR VIDEO SECTION ENDS HERE */
