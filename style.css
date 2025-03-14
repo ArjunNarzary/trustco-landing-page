@@ -15,6 +15,7 @@
   --font-xl: 4.5rem;
   --section-horizontal-padding: 2rem;
   --section-vertical-padding: 2rem;
+  --para-line-height: 3rem;
 }
 
 @media (min-width: 1024px) {
@@ -26,6 +27,7 @@
     --font-xl: 7rem;
     --section-horizontal-padding: 6rem;
     --section-vertical-padding: 6rem;
+    --para-line-height: 3.75rem;
   }
 }
 @media (min-width: 1080px) {
@@ -77,6 +79,7 @@ h2 {
 }
 p {
   font-size: var(--font-md);
+  line-height: var(--para-line-height);
 }
 
 a {
@@ -460,3 +463,49 @@ header {
   }
 }
 /* CSS FOR VIDEO SECTION ENDS HERE */
+
+/* CSS FOR BENEFIT SECTION STARTS HERE */
+#benefits {
+  display: flex;
+  align-items: start;
+  gap: 8rem;
+  .benefits-heading-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    gap: var(--spacing-lg);
+    .benefit-pill {
+      color: #fff;
+      background-color: var(--primary-color);
+      width: fit-content;
+      padding: 0.7rem 2rem;
+      border-radius: 5rem;
+      font-size: var(--font-sm);
+    }
+    h2 {
+      margin: 0;
+    }
+  }
+  .benefits-cards-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    .benefit-card {
+      background-color: var(--accent-color);
+      padding: 3rem;
+      border-radius: 2rem;
+      height: fit-content;
+      h3 {
+        font-size: 3rem;
+        font-weight: 700;
+      }
+      p {
+        font-weight: 400;
+        color: #404040;
+        font-size: var(--font-sm);
+        line-height: 3rem;
+      }
+    }
+  }
+}
+/* CSS FOR BENEFIT SECTION ENDS HERE */
