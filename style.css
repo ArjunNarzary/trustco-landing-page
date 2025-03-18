@@ -740,5 +740,19 @@ header {
     }
   }
 }
-
 /* CSS FOR BUILDING BRDIGES SECTION ENDS HERE */
+
+/* CSS FOR NUMBERS SECTION STARTS HERE */
+#numbers {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  div {
+    text-align: center;
+    h1 {
+      color: var(--primary-color);
+      margin: 0;
+      margin-bottom: 1rem;
+    }
+  }
+}
+/* CSS FOR NUMBERS SECTION ENDS HERE */
