@@ -924,31 +924,54 @@ header {
   background-color: var(--accent-color);
   display: flex;
   flex-direction: column;
-  gap: 8rem;
+  gap: 5rem;
   .testimonials-heading {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     h2 {
       margin: 0;
+      text-align: center;
     }
     a {
-      display: flex;
-      align-items: center;
-      gap: 1rem;
-      span {
-        font-size: var(--font-sm);
-        font-weight: 500;
-      }
-      img {
-        width: 3rem;
-        height: 3rem;
-      }
+      display: none;
     }
   }
-  .testimonials-cards-container {
+  .testimonials-cards-container-md {
+    display: none;
+    gap: 4rem;
+  }
+  .testimonials-cards-container-sm {
+    width: 100vw;
+    margin-left: -2rem;
     display: flex;
     gap: 4rem;
+    overflow: hidden;
+    position: relative;
+    justify-content: center;
+    .testimonials-card {
+      width: 60vw;
+      transition: all 0.3s ease-in-out;
+      min-height: 27rem;
+      display: none;
+    }
+    .testimonials-card.active {
+      z-index: 2;
+      display: block;
+    }
+    .testimonials-card.prev {
+      position: absolute;
+      left: -45%;
+      display: block;
+    }
+    .testimonials-card.next {
+      position: absolute;
+      right: -45%;
+      display: block;
+    }
+  }
+  .testimonials-cards-container-md,
+  .testimonials-cards-container-sm {
     .testimonials-card {
       background-color: #fff;
       padding: 2rem;
@@ -1001,6 +1024,63 @@ header {
     .active {
       width: 10rem;
       background-color: var(--primary-color);
+    }
+  }
+
+  .see-all-sm {
+    margin: 0 auto;
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      span {
+        font-size: var(--font-md);
+        font-weight: 500;
+      }
+      img {
+        width: 3rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #testimonials {
+    gap: 4rem;
+    .testimonials-heading {
+      justify-content: space-between;
+      h2 {
+        margin: 0;
+        text-align: start;
+      }
+      a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        span {
+          font-size: var(--font-md);
+          font-weight: 500;
+        }
+        img {
+          width: 3rem;
+        }
+      }
+    }
+    .testimonials-cards-container-md {
+      display: flex;
+    }
+    .testimonials-cards-container-sm,
+    .see-all-sm {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  #testimonials {
+    gap: 8rem;
+    a span {
+      font-size: var(--font-sm);
     }
   }
 }
