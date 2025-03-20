@@ -1231,21 +1231,22 @@ header {
 /* CSS FOR CTA BANNER SECTION STARTS HERE */
 #cta-banner {
   background-color: #12141d;
-  padding: 0;
-  padding-left: var(--section-horizontal-padding) !important;
   color: #fff;
   display: flex;
-  justify-items: space-between;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 0;
   .cta-text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     gap: 2.5rem;
     h2 {
       margin: 0;
+      text-align: center;
     }
     a div {
-      margin-top: 3rem;
       background-color: var(--professional-yellow-color);
       width: fit-content;
       display: flex;
@@ -1271,7 +1272,45 @@ header {
     }
   }
   .cta-img-container img {
-    transform: translate(-18rem, 0);
+    width: 100%;
+
+    /* transform: translate(-18rem, 0); */
+  }
+}
+
+@media (min-width: 768px) {
+  #cta-banner {
+    display: flex;
+    justify-items: space-between;
+    flex-direction: row;
+    gap: 0;
+    padding: 0;
+    padding-left: var(--section-horizontal-padding) !important;
+    .cta-text-container {
+      justify-content: center;
+      align-items: start;
+      h2 {
+        text-align: start;
+      }
+      a div {
+        margin-top: 3rem;
+      }
+    }
+    .cta-img-container img {
+      width: 50vw;
+      height: auto;
+      transform: translate(-4rem, 0);
+    }
+  }
+}
+
+@media (min-width: 1080px) {
+  #cta-banner {
+    .cta-img-container img {
+      width: 45vw;
+      height: auto;
+      transform: translate(-18rem, 0);
+    }
   }
 }
 /* CSS FOR CTA BANNER SECTION ENDS HERE */
