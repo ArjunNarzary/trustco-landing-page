@@ -1232,7 +1232,7 @@ header {
 #cta-banner {
   background-color: #12141d;
   padding: 0;
-  padding-left: var(--section-vertical-padding);
+  padding-left: var(--section-horizontal-padding) !important;
   color: #fff;
   display: flex;
   justify-items: space-between;
