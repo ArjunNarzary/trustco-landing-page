@@ -13,7 +13,7 @@
   --font-sm: 1.2rem;
   --font-md: 1.8rem;
   --font-lg: 4rem;
-  --font-xl: 4.5rem;
+  --font-xl: 3.5.5rem;
   --section-horizontal-padding: 2rem;
   --section-vertical-padding: 4rem;
   --para-line-height: 2.5rem;
@@ -1539,3 +1539,122 @@ hr {
   }
 }
 /* CSS FOR WE ARE HERE SECTION ENDS HERE */
+
+/* CSS FOR CONTACT FROM SECTION STARTS HERE */
+#contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  h2,
+  p {
+    margin: 0;
+  }
+  .heading,
+  .sub-heading {
+    max-width: 100rem;
+    text-align: center;
+  }
+  .form-container {
+    min-width: 70vw;
+    .form-control {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      .form-group {
+        position: relative;
+        width: 100%;
+        input {
+          width: 100%;
+          border: 1px solid var(--secondary-color);
+          border-radius: 1rem;
+          padding: 1.7rem 1rem;
+          padding-left: 6rem;
+        }
+        input::placeholder {
+          color: var(--secondary-color);
+        }
+        img {
+          position: absolute;
+          left: 1rem;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 3.5rem;
+          height: 3.5rem;
+          object-fit: contain;
+        }
+      }
+      .text-area {
+        grid-column: span 2;
+        textarea {
+          width: 100%;
+          border: 1px solid var(--secondary-color);
+          border-radius: 1rem;
+          padding: 1.7rem 2rem;
+          outline: none !important;
+          resize: none;
+        }
+        textarea::placeholder {
+          color: var(--secondary-color);
+        }
+      }
+      .form-submit {
+        grid-column: span 2;
+        display: flex;
+        justify-content: space-between;
+
+        .custom-checkbox {
+          display: flex;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .custom-checkbox input {
+          display: none;
+        }
+
+        .checkmark {
+          width: 3.8rem;
+          height: 3.8rem;
+          background-color: var(--secondary-color);
+          border-radius: 50%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 8px;
+          .checkmark-icon {
+            width: 2rem;
+            height: 2rem;
+            object-fit: contain;
+            opacity: 0;
+            transition: background 0.3s ease;
+          }
+        }
+
+        /* Show checkmark when checkbox is checked */
+        .custom-checkbox input:checked + .checkmark .checkmark-icon {
+          opacity: 1;
+        }
+
+        .checkbox-text {
+          font-size: 2rem;
+        }
+
+        .checkbox-text strong {
+          color: var(--primary-color);
+        }
+
+        button {
+          background-color: var(--primary-color);
+          color: #fff;
+          font-weight: 700;
+          border: 1px solid transparent;
+          box-shadow: 0 0 10px transparent;
+          padding: 1.5rem 5rem;
+          border-radius: 6rem;
+        }
+      }
+    }
+  }
+}
+/* CSS FOR CONTACT FROM SECTION ENDS HERE */
