@@ -1085,3 +1085,74 @@ header {
   }
 }
 /* CSS FOR TESTIMONIAL SECTION END HERE */
+
+/* CSS FOR BLOGS SECTION STARTS HERE */
+#blogs {
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  .blogs-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      margin: 0;
+      text-align: start;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      span {
+        font-size: var(--font-sm);
+        font-weight: 500;
+      }
+      img {
+        width: 3rem;
+      }
+    }
+  }
+  .blogs-cards-container-md {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8rem;
+    .blogs-card {
+      border: 1px solid var(--accent-color);
+      border-radius: 2rem;
+      display: flex;
+      flex-direction: column;
+      .blog-image {
+        width: 100%;
+      }
+      .card-content {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+        p {
+          font-size: var(--font-sm);
+          span {
+            font-weight: 300;
+          }
+        }
+        h3 {
+          margin: 0;
+          font-size: var(--font-md);
+        }
+        a {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          span {
+            font-size: var(--font-sm);
+            font-weight: 500;
+          }
+          img {
+            width: 3rem;
+          }
+        }
+      }
+    }
+  }
+}
+/* CSS FOR BLOGS SECTION ENDS HERE */
