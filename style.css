@@ -1227,3 +1227,51 @@ header {
   }
 }
 /* CSS FOR BLOGS SECTION ENDS HERE */
+
+/* CSS FOR CTA BANNER SECTION STARTS HERE */
+#cta-banner {
+  background-color: #12141d;
+  padding: 0;
+  padding-left: var(--section-vertical-padding);
+  color: #fff;
+  display: flex;
+  justify-items: space-between;
+  .cta-text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    h2 {
+      margin: 0;
+    }
+    a div {
+      margin-top: 3rem;
+      background-color: var(--professional-yellow-color);
+      width: fit-content;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 2rem;
+      padding: 1rem 2rem;
+      border-radius: 5rem;
+      span {
+        font-size: var(--font-sm);
+      }
+      img {
+        height: 3rem;
+        width: 3rem;
+        object-fit: contain;
+        border-radius: 50%;
+        background: #00000029;
+      }
+    }
+    p {
+      font-size: var(--font-sm);
+      color: var(--accent-color);
+    }
+  }
+  .cta-img-container img {
+    transform: translate(-18rem, 0);
+  }
+}
+/* CSS FOR CTA BANNER SECTION ENDS HERE */
