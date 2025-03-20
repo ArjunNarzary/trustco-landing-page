@@ -1422,13 +1422,19 @@ header {
 /* CSS FOR FOOTER LINKS SECTION ENDS HERE */
 
 /* CSS FOR FOOTER CREDIT SECTION STARTS HERE */
+hr {
+  border-top: 1px solid var(--text-color);
+  margin: 0 2rem;
+}
+
 #credits {
   background-color: var(--accent-color);
   color: var(--secondary-color);
   display: flex;
+  flex-direction: column;
+  gap: 3rem;
   justify-content: space-between;
   align-items: center;
-  border-top: 1px solid var(--text-color);
   padding: 3rem var(--section-horizontal-padding);
   font-size: 2rem;
   p {
@@ -1454,6 +1460,24 @@ header {
       color: var(--secondary-color);
       outline: none;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  hr {
+    margin: 0;
+  }
+  #credits {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem var(--section-horizontal-padding);
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  #credits {
+    padding: 3rem var(--section-horizontal-padding);
+    font-size: 2rem;
   }
 }
 /* CSS FOR FOOTER CREDIT SECTION ENDS HERE */
