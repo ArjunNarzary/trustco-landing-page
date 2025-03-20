@@ -938,7 +938,7 @@ header {
     .testimonials-card {
       width: 60vw;
       transition: all 0.3s ease-in-out;
-      min-height: 27rem;
+      min-height: 31rem;
       display: none;
     }
     .testimonials-card.active {
