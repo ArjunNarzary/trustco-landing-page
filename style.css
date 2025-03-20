@@ -1546,7 +1546,7 @@ hr {
 #contact-form {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   h2,
   p {
@@ -1564,6 +1564,7 @@ hr {
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       .form-group {
+        grid-column: span 2;
         position: relative;
         width: 100%;
         input {
@@ -1587,7 +1588,7 @@ hr {
         }
       }
       .text-area {
-        grid-column: span 2;
+        grid-column: span 2 !important;
         textarea {
           width: 100%;
           border: 1px solid var(--secondary-color);
@@ -1604,6 +1605,8 @@ hr {
         grid-column: span 2;
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        gap: 4rem;
 
         .custom-checkbox {
           display: flex;
@@ -1654,6 +1657,22 @@ hr {
           box-shadow: 0 0 10px transparent;
           padding: 1.5rem 5rem;
           border-radius: 6rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #contact-form {
+    gap: 4rem;
+    .form-container {
+      .form-control {
+        .form-group {
+          grid-column: span 1;
+        }
+        .form-submit {
+          flex-direction: row;
         }
       }
     }
