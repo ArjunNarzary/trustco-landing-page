@@ -1481,3 +1481,61 @@ hr {
   }
 }
 /* CSS FOR FOOTER CREDIT SECTION ENDS HERE */
+
+/* ------------------------- CSS FOR CONTACT PAGE ------------------------- */
+/* CSS FOR WE ARE HERE SECTION STARTS HERE */
+#we-are-here {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+  background-color: var(--accent-color);
+  h2,
+  p {
+    margin: 0;
+  }
+  .heading,
+  .sub-heading {
+    max-width: 100rem;
+    text-align: center;
+  }
+
+  .contact-option-container {
+    display: flex;
+    justify-content: center;
+    gap: 4rem;
+
+    .option-card {
+      background-color: #fff;
+      padding: 3rem;
+      border-radius: 1.5rem;
+      max-width: 50rem;
+      min-height: 40rem;
+      .card-icon {
+        width: 8rem;
+        height: 8rem;
+        object-fit: contain;
+      }
+      div {
+        h3 {
+          font-size: 3rem;
+        }
+        p {
+          color: #404040;
+        }
+      }
+      a {
+        margin-top: 5rem;
+        display: block;
+        width: fit-content;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        gap: 2rem;
+        font-size: 2rem;
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+/* CSS FOR WE ARE HERE SECTION ENDS HERE */
