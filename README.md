@@ -6,3 +6,4 @@ A responsive landing page for trustco
 
 - HTML5
 - CSS
+- Javascript
