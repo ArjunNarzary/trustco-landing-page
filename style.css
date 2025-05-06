@@ -8,6 +8,7 @@
   --spacing-sm: 1rem;
   --spacing-md: 2rem;
   --spacing-lg: 3rem;
+  --spacing-xl: 4rem;
   --font-xs: 1rem;
   --font-sm: 1.2rem;
   --font-md: 1.8rem;
@@ -763,3 +764,81 @@ header {
   }
 }
 /* CSS FOR NUMBERS SECTION ENDS HERE */
+
+/* CSS FOR MEET FOUNDER SECTION STARTS HERE */
+#meet-founder {
+  display: grid;
+  grid-template-columns: 2fr 2.5fr;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  .bio-container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+    h1 {
+      margin: 0;
+    }
+    .founder-info {
+      h6 {
+        font-size: var(--font-sm);
+        margin: 0;
+      }
+      p {
+        font-size: 1.5em;
+        font-weight: 200;
+      }
+    }
+    .team-behind-success-btn {
+      margin-top: 2rem;
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+      justify-items: start;
+      width: fit-content;
+      background-color: var(--primary-color);
+      color: #fff;
+      padding: 1rem 2rem;
+      border-radius: 5rem;
+      p {
+        font-size: var(--font-sm);
+      }
+    }
+  }
+  .image-container {
+    display: flex;
+    justify-content: end;
+    .founder-img-container {
+      position: relative;
+      max-width: 71rem;
+      .founder-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+      .crown-icon-container {
+        position: absolute;
+        background-color: var(--primary-color);
+        height: 35rem;
+        bottom: 9em;
+        right: 2.8rem;
+        border-radius: 10rem;
+        padding: 1rem;
+        z-index: -1;
+        img {
+          width: 10rem;
+          height: 10rem;
+        }
+      }
+      .circle-girl-img {
+        position: absolute;
+        bottom: -17rem;
+        left: -10rem;
+        width: 30rem;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+/* CSS FOR MEET FOUNDER SECTION ENDS HERE */
