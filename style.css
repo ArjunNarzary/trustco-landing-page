@@ -918,3 +918,90 @@ header {
   }
 }
 /* CSS FOR MEET FOUNDER SECTION ENDS HERE */
+
+/* CSS FOR TESTIMONIAL SECTION START HERE */
+#testimonials {
+  background-color: var(--accent-color);
+  display: flex;
+  flex-direction: column;
+  gap: 8rem;
+  .testimonials-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      margin: 0;
+    }
+    a {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      span {
+        font-size: var(--font-sm);
+        font-weight: 500;
+      }
+      img {
+        width: 3rem;
+        height: 3rem;
+      }
+    }
+  }
+  .testimonials-cards-container {
+    display: flex;
+    gap: 4rem;
+    .testimonials-card {
+      background-color: #fff;
+      padding: 2rem;
+      border-radius: 2rem;
+      h1 {
+        margin: 0;
+        color: var(--professional-yellow-color);
+        font-size: 10rem;
+        font-weight: 400;
+        line-height: 0rem;
+        padding: 0;
+        margin-top: 5rem;
+      }
+      p {
+        margin: 0;
+      }
+    }
+    .testimonials-author {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      gap: 1.5rem;
+      img {
+        width: 6rem;
+        height: 6rem;
+        border-radius: 50%;
+      }
+      p {
+        font-size: var(--font-sm);
+      }
+      .author-name {
+        font-weight: 700;
+      }
+      .auther-info {
+        line-height: 2rem;
+      }
+    }
+  }
+
+  .testimonial-marker-container {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    .testimonial-marker {
+      width: 2.5rem;
+      height: 1.5rem;
+      border-radius: 1rem;
+      background: #d7e0e5;
+    }
+    .active {
+      width: 10rem;
+      background-color: var(--primary-color);
+    }
+  }
+}
+/* CSS FOR TESTIMONIAL SECTION END HERE */
