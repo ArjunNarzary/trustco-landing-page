@@ -768,20 +768,21 @@ header {
 /* CSS FOR MEET FOUNDER SECTION STARTS HERE */
 #meet-founder {
   display: grid;
-  grid-template-columns: 2fr 2.5fr;
+  grid-template-columns: 1fr;
   gap: 4rem;
   align-items: center;
   width: 100%;
   .bio-container {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-xl);
+    gap: var(--spacing-md);
+    text-align: center;
     h1 {
       margin: 0;
     }
     .founder-info {
       h6 {
-        font-size: var(--font-sm);
+        font-size: var(--font-md);
         margin: 0;
       }
       p {
@@ -790,27 +791,29 @@ header {
       }
     }
     .team-behind-success-btn {
+      margin: auto;
       margin-top: 2rem;
       display: flex;
-      gap: 2rem;
+      gap: 4rem;
       align-items: center;
-      justify-items: start;
+      justify-items: center;
       width: fit-content;
       background-color: var(--primary-color);
       color: #fff;
-      padding: 1rem 2rem;
+      padding: 1.5rem;
+      padding-left: 2rem;
       border-radius: 5rem;
       p {
-        font-size: var(--font-sm);
+        font-size: var(--font-md);
       }
     }
   }
   .image-container {
     display: flex;
-    justify-content: end;
+    justify-content: center;
     .founder-img-container {
       position: relative;
-      max-width: 71rem;
+      width: 100%;
       .founder-img {
         width: 100%;
         height: auto;
@@ -819,24 +822,97 @@ header {
       .crown-icon-container {
         position: absolute;
         background-color: var(--primary-color);
-        height: 35rem;
-        bottom: 9em;
+        height: 30rem;
+        bottom: 9rem;
         right: 2.8rem;
         border-radius: 10rem;
         padding: 1rem;
         z-index: -1;
         img {
-          width: 10rem;
-          height: 10rem;
+          width: 8rem;
+          height: 8rem;
         }
       }
       .circle-girl-img {
         position: absolute;
-        bottom: -17rem;
-        left: -10rem;
-        width: 30rem;
+        bottom: -12rem;
+        left: -3rem;
+        width: 22rem;
         height: auto;
         object-fit: contain;
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #meet-founder {
+    grid-template-columns: 1fr 1fr;
+    .bio-container {
+      text-align: start;
+      gap: var(--spacing-xl);
+      .founder-info {
+        h6 {
+          font-size: var(--font-sm);
+        }
+        p {
+          font-size: 1.5em;
+          font-weight: 200;
+        }
+      }
+      .team-behind-success-btn {
+        margin: 0;
+        justify-items: start;
+        p {
+          font-size: var(--font-sm);
+        }
+      }
+    }
+    .image-container {
+      justify-content: end;
+      .founder-img-container {
+        max-width: 71rem;
+        .crown-icon-container {
+          height: 27rem;
+          bottom: 8rem;
+          right: 3.7rem;
+          padding: 1rem;
+          z-index: -1;
+          img {
+            width: 6rem;
+            height: 6rem;
+          }
+        }
+        .circle-girl-img {
+          bottom: -12rem;
+          left: -4rem;
+          width: 20rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  #meet-founder {
+    grid-template-columns: 2fr 2.5fr;
+    .image-container {
+      justify-content: end;
+      .founder-img-container {
+        .crown-icon-container {
+          height: 35rem;
+          bottom: 17rem;
+          right: 3.7rem;
+          padding: 1.5rem;
+          img {
+            width: 12rem;
+            height: 12rem;
+          }
+        }
+        .circle-girl-img {
+          bottom: -17rem;
+          left: -10rem;
+          width: 30rem;
+        }
       }
     }
   }
