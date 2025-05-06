@@ -14,8 +14,15 @@
   --font-lg: 4rem;
   --font-xl: 4.5rem;
   --section-horizontal-padding: 2rem;
-  --section-vertical-padding: 2rem;
-  --para-line-height: 3rem;
+  --section-vertical-padding: 4rem;
+  --para-line-height: 2.5rem;
+}
+
+@media (min-width: 768) {
+  :root {
+    --section-horizontal-padding: 3rem;
+    --section-vertical-padding: 5rem;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -80,6 +87,7 @@ h2 {
 p {
   font-size: var(--font-md);
   line-height: var(--para-line-height);
+  margin: 0;
 }
 
 a {
@@ -96,6 +104,11 @@ section {
   padding: var(--section-vertical-padding) var(--section-horizontal-padding);
 }
 
+img {
+  display: block;
+}
+
+/* CSS FOR HERO SECTION STARTS HERE */
 #hero {
   background-color: var(--accent-color);
   display: flex;
@@ -127,8 +140,6 @@ section {
     margin-top: 0;
     padding: 0 1rem;
   }
-
-  /* CSS FOR HERO SECTION STARTS HERE */
 
   .hero-img-lg {
     display: none;
@@ -223,8 +234,6 @@ section {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 5rem;
-  padding-bottom: 5rem;
   gap: 6rem;
 
   .trusted-brand-icon-container {
@@ -394,7 +403,6 @@ header {
 /* CSS FOR VIDEO SECTION STARTS HERE */
 #video-section {
   background-color: var(--primary-color);
-  padding-top: 5rem;
   padding-bottom: 0;
   .video-heading {
     display: flex;
@@ -442,6 +450,7 @@ header {
       object-fit: contain;
       width: 100%;
       height: auto;
+      display: block;
     }
     .video-play-icon {
       width: 6rem;
@@ -467,13 +476,15 @@ header {
 /* CSS FOR BENEFIT SECTION STARTS HERE */
 #benefits {
   display: flex;
-  align-items: start;
-  gap: 8rem;
+  align-items: center;
+  gap: 4rem;
+  flex-direction: column;
   .benefits-heading-container {
     display: flex;
     flex-direction: column;
     justify-content: start;
-    gap: var(--spacing-lg);
+    align-items: center;
+    gap: var(--spacing-md);
     .benefit-pill {
       color: #fff;
       background-color: var(--primary-color);
@@ -485,27 +496,77 @@ header {
     h2 {
       margin: 0;
     }
+    h2,
+    p {
+      text-align: center;
+    }
   }
   .benefits-cards-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 2rem;
     .benefit-card {
       background-color: var(--accent-color);
       padding: 3rem;
       border-radius: 2rem;
       height: fit-content;
+      max-width: 55rem;
+
       h3 {
         font-size: 3rem;
         font-weight: 700;
+        margin-bottom: 1rem;
       }
       p {
-        font-weight: 400;
         color: #404040;
-        font-size: var(--font-sm);
-        line-height: 3rem;
       }
     }
   }
 }
+
+@media (min-width: 768px) {
+  #benefits {
+    .benefits-cards-container {
+      grid-template-columns: repeat(3, 1fr) !important;
+
+      .benefit-card {
+        h3 {
+          margin-bottom: 2rem;
+          margin-top: 3rem;
+        }
+        p {
+          line-height: 2.5rem;
+          font-weight: 400;
+          font-size: 2rem;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1024px) {
+  #benefits {
+    flex-direction: row;
+    align-items: start;
+    gap: 8rem;
+
+    .benefits-heading-container {
+      align-items: start;
+      gap: var(--spacing-lg);
+      h2,
+      p {
+        text-align: start;
+      }
+
+      .benefit-card {
+        h3 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 3rem;
+        }
+      }
+    }
+  }
+}
+
 /* CSS FOR BENEFIT SECTION ENDS HERE */
