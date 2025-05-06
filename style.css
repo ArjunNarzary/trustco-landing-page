@@ -1314,3 +1314,63 @@ header {
   }
 }
 /* CSS FOR CTA BANNER SECTION ENDS HERE */
+
+/* CSS FOR FOOTER SECTION STARTS HERE */
+footer {
+  padding: var(--section-vertical-padding) var(--section-horizontal-padding);
+  display: grid;
+  grid-template-columns: 2fr 3fr 2fr;
+  gap: 4rem;
+
+  .icon-container {
+    .social-icons {
+      margin-top: 4rem;
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      gap: 2rem;
+      a {
+        display: flex;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        justify-content: center;
+        align-items: center;
+        background-color: var(--secondary-color);
+        cursor: pointer;
+        img {
+          width: 2rem;
+          height: 2rem;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+
+  p {
+    font-size: var(--font-sm);
+  }
+
+  .links-container {
+    display: flex;
+    justify-content: start;
+    gap: 4rem;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      li {
+        list-style-type: none;
+        font-size: var(--font-sm);
+        .active {
+          font-weight: 700;
+          font-size: var(--font-md);
+        }
+        a:hover {
+          border-bottom: 1px solid var(--secondary-color);
+        }
+      }
+    }
+  }
+}
+/* CSS FOR FOOTER SECTION ENDS HERE */
