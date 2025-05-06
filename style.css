@@ -13,7 +13,7 @@
   --font-sm: 1.2rem;
   --font-md: 1.8rem;
   --font-lg: 4rem;
-  --font-xl: 3.5.5rem;
+  --font-xl: 3.5rem;
   --section-horizontal-padding: 2rem;
   --section-vertical-padding: 4rem;
   --para-line-height: 2.5rem;
@@ -58,26 +58,6 @@ body {
   color: var(--text-color);
   transition: linear ease-in-out;
 }
-
-/* .lato-regular {
-  font-weight: 400;
-  font-style: normal;
-}
-
-.lato-bold {
-  font-weight: 700;
-  font-style: normal;
-}
-
-.lato-black {
-  font-weight: 800;
-  font-style: normal;
-} */
-
-/* --breakpoint-sm: 480px;
---breakpoint-md: 768px;
---breakpoint-lg: 1024px;
---breakpoint-xl: 1080px; */
 
 h1 {
   font-size: var(--font-xl);
@@ -269,7 +249,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: var(--spacing-lg);
-  background-color: var(--accent-color);
+  /* background-color: var(--accent-color); */
   .nav-lg {
     display: none;
   }
@@ -397,6 +377,12 @@ header {
     .auth-btn-container {
       display: flex !important;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  header {
+    background-color: var(--accent-color);
   }
 }
 /* CSS FOR HEADER SECTION ENDS HERE */
@@ -952,7 +938,7 @@ header {
     .testimonials-card {
       width: 60vw;
       transition: all 0.3s ease-in-out;
-      min-height: 27rem;
+      min-height: 31rem;
       display: none;
     }
     .testimonials-card.active {
@@ -1489,7 +1475,7 @@ hr {
   flex-direction: column;
   gap: 4rem;
   align-items: center;
-  background-color: var(--accent-color);
+  /* background-color: tra; */
   h2,
   p {
     margin: 0;
@@ -1503,14 +1489,13 @@ hr {
   .contact-option-container {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 1rem;
+    flex-direction: column;
 
     .option-card {
-      background-color: #fff;
-      padding: 3rem;
-      border-radius: 1.5rem;
-      max-width: 50rem;
-      min-height: 40rem;
+      background-color: transparent;
+      padding: 2rem;
+
       .card-icon {
         width: 8rem;
         height: 8rem;
@@ -1538,13 +1523,30 @@ hr {
     }
   }
 }
+
+@media (min-width: 768px) {
+  #we-are-here {
+    background-color: var(--accent-color);
+    .contact-option-container {
+      gap: 4rem;
+      flex-direction: row;
+      .option-card {
+        padding: 3rem;
+        background-color: #fff;
+        border-radius: 1.5rem;
+        max-width: 50rem;
+        min-height: 40rem;
+      }
+    }
+  }
+}
 /* CSS FOR WE ARE HERE SECTION ENDS HERE */
 
 /* CSS FOR CONTACT FROM SECTION STARTS HERE */
 #contact-form {
   display: flex;
   flex-direction: column;
-  gap: 4rem;
+  gap: 2rem;
   align-items: center;
   h2,
   p {
@@ -1562,6 +1564,7 @@ hr {
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       .form-group {
+        grid-column: span 2;
         position: relative;
         width: 100%;
         input {
@@ -1585,7 +1588,7 @@ hr {
         }
       }
       .text-area {
-        grid-column: span 2;
+        grid-column: span 2 !important;
         textarea {
           width: 100%;
           border: 1px solid var(--secondary-color);
@@ -1602,6 +1605,8 @@ hr {
         grid-column: span 2;
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+        gap: 4rem;
 
         .custom-checkbox {
           display: flex;
@@ -1652,6 +1657,22 @@ hr {
           box-shadow: 0 0 10px transparent;
           padding: 1.5rem 5rem;
           border-radius: 6rem;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  #contact-form {
+    gap: 4rem;
+    .form-container {
+      .form-control {
+        .form-group {
+          grid-column: span 1;
+        }
+        .form-submit {
+          flex-direction: row;
         }
       }
     }
