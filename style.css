@@ -1273,8 +1273,6 @@ header {
   }
   .cta-img-container img {
     width: 100%;
-
-    /* transform: translate(-18rem, 0); */
   }
 }
 
@@ -1315,8 +1313,8 @@ header {
 }
 /* CSS FOR CTA BANNER SECTION ENDS HERE */
 
-/* CSS FOR FOOTER SECTION STARTS HERE */
-footer {
+/* CSS FOR FOOTER LINKS SECTION STARTS HERE */
+#footer-links {
   padding: var(--section-vertical-padding) var(--section-horizontal-padding);
   display: grid;
   grid-template-columns: 1fr;
@@ -1380,7 +1378,7 @@ footer {
 }
 
 @media (min-width: 768px) {
-  footer {
+  #footer-links {
     grid-template-columns: 2fr 3fr 2fr;
     .icon-container {
       img {
@@ -1409,7 +1407,7 @@ footer {
   }
 }
 @media (min-width: 1024px) {
-  footer {
+  #footer-links {
     .links-container {
       gap: 10rem;
       ul {
@@ -1421,4 +1419,41 @@ footer {
     }
   }
 }
-/* CSS FOR FOOTER SECTION ENDS HERE */
+/* CSS FOR FOOTER LINKS SECTION ENDS HERE */
+
+/* CSS FOR FOOTER CREDIT SECTION STARTS HERE */
+#credits {
+  background-color: var(--accent-color);
+  color: var(--secondary-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--text-color);
+  padding: 3rem var(--section-horizontal-padding);
+  font-size: 2rem;
+  p {
+    font-size: 2rem;
+  }
+
+  .credits-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+  }
+
+  .language-selector {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 0.5rem;
+
+    select {
+      border: none;
+      background-color: transparent;
+      color: var(--secondary-color);
+      outline: none;
+    }
+  }
+}
+/* CSS FOR FOOTER CREDIT SECTION ENDS HERE */
